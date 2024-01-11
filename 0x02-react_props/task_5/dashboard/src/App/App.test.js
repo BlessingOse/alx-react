@@ -13,11 +13,16 @@ describe("App tests", () => {
 
     expect(component).toBeDefined();
   });
-  it("should render Notifications component", () => {
-    const component = shallow(<App />);
+  // it("should render Notifications component", () => {
+  //   const component = shallow(<App />);
 
-    expect(component.containsMatchingElement(<Notifications />)).toEqual(true);
-  });
+  //   expect(component.containsMatchingElement(<Notifications />)).toEqual(true);
+  // });
+  it('should render Notification comp', () => {
+    const wrapper = shallow(<App  />)
+    const notif = wrapper.find(Notifications)
+    expect(notif.exists()).toBe(true)
+  })
   it("should render Header component", () => {
     const component = shallow(<App />);
 
