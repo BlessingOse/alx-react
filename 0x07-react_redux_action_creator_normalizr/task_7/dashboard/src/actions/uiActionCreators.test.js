@@ -9,12 +9,12 @@ const mockStore = configureStore(middleWares);
 
 describe("tests for UI notification action creators", () => {
   it("should create proper action for login", () => {
-    const email = "james@gmail.com";
-    const password = "heheheh";
+    const email = "dupe@gmail.com";
+    const password = "hiehiehieh";
 
     expect(login(email, password)).toEqual({
       type: LOGIN,
-      user: { email: "james@gmail.com", password: "heheheh" },
+      user: { email: "dupe@gmail.com", password: "hiehiehieh" },
     });
   });
 
